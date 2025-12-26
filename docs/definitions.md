@@ -1,7 +1,7 @@
 
 # EXERCICE DEFINITIONS
 
-Objectif : Définir des termes basiques
+Objectif : Définir des termes basiques du web
 
 ## Définitions
 
