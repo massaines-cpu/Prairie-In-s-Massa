@@ -38,5 +38,9 @@ Objectif : Analyser et produire une application
 3. Cas 3
 ![wireframe](images/cas3.png)
 
+### Class diagram
+
+![class](images/class.png)
+
 ### LIEN DEPÔT
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
