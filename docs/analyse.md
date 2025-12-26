@@ -14,7 +14,7 @@ Objectif : Analyser et produire une application
 
 ### Diagramme use case
 
-![Diagramme](bloc-notes.png)
+![Diagramme](image/bloc-notes.png)
 
 ### Les scénarios nominaux
 1. L’utilisateur clique sur « Plus »
