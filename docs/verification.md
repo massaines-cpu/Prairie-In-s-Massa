@@ -14,4 +14,4 @@ Objectif : Verifier si Python, Node sont présents et que 2+2 font 4.
 `echo 2 + 2 = $((2+2))`
 
 ## LIEN DEPÔT
-[Lien vers exercice](https://github.com/massaines-cpu/SCRIPT/blob/main/verification)
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/verification)

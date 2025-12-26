@@ -11,5 +11,5 @@ Objectif : Créer des sous groupes avec tous les prénoms repartis de manière a
 
 ## Version JavaScript
 
-## LIEN DEPÔT
-[Lien vers exercice](https://github.com/massaines-cpu/DOCUMENTATION-PRAIRIE/blob/main/prenom.py)
+### LIEN DEPÔT
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/Tableaux)
