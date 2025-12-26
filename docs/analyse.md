@@ -26,8 +26,9 @@ Objectif : Analyser et produire une application
 7. Même processus ainsi de suite
 
 ### Diagramme d’activité
-![Diagramme use case](images/activite.png)
-<img src="images/activite.png" width="400">
+
+<img src="images/activite.png" width="300">
+
 
 ### LIEN DEPÔT
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
