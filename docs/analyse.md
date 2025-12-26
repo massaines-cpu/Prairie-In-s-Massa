@@ -27,7 +27,7 @@ Objectif : Analyser et produire une application
 7. Même processus ainsi de suite
 
 ### Diagramme d’activité
-
+![Diagramme use case](images/activite.png)
 <img src="images/activite.png" width="400">
 
 ### LIEN DEPÔT
