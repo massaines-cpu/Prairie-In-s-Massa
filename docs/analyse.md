@@ -29,5 +29,14 @@ Objectif : Analyser et produire une application
 
 ![Diagramme use case](images/activite.png)
 
+### Wireframe
+
+1. Cas 1
+![wireframe](images/cas1.png)
+2. Cas 2 
+![wireframe](images/cas2.png)
+3. Cas 3
+![wireframe](images/cas3.png)
+
 ### LIEN DEPÔT
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
