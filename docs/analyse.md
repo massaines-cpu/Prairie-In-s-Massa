@@ -14,6 +14,7 @@ Objectif : Analyser et produire une application
 
 ### Diagramme use case
 
+![Diagramme use case](images/bloc-notes.png)
 <img src="images/bloc-notes.png" width="400">
 
 ### Les scénarios nominaux
@@ -27,8 +28,8 @@ Objectif : Analyser et produire une application
 
 ### Diagramme d’activité
 
+![Diagramme use case](images/activite.png)
 <img src="images/activite.png" width="300">
-
 
 ### LIEN DEPÔT
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
