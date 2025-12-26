@@ -1,0 +1,17 @@
+# EXERCICE VERIFICATION
+
+Objectif : Verifier si Python, Node sont présents et que 2+2 font 4.
+
+## CODE VERIFICATION
+
+1. Python
+`python3 --version`
+
+2. Node
+`echo Node $(node --version)`
+
+3. Opération
+`echo 2 + 2 = $((2+2))`
+
+## LIEN DEPÔT
+[Lien vers exercice](https://github.com/massaines-cpu/SCRIPT/blob/main/verification)
