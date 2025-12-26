@@ -15,6 +15,7 @@ Objectif : Analyser et produire une application
 ### Diagramme use case
 
 ![Diagramme use case](images/bloc-notes.png)
+<img src="images/bloc-notes.png" width="400">
 
 ### Les scénarios nominaux
 1. L’utilisateur clique sur « Plus »
@@ -25,5 +26,9 @@ Objectif : Analyser et produire une application
 6. L’utilisateur peut cliquer sur « Plus » autant de fois qu’il en a besoin mais impossible de revenir en arrière
 7. Même processus ainsi de suite
 
+### Diagramme d’activité
+
+<img src="images/activite.png" width="400">
+
 ### LIEN DEPÔT
-[Lien vers exercice]()
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
