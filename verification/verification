@@ -1,0 +1,6 @@
+echo Python :
+python3 --version
+echo Node :
+echo Node $(node --version)
+echo operation verif :
+echo 2 + 2 = $((2+2))
