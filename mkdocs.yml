@@ -1,5 +1,1 @@
 site_name: Documentation Inès Massa
-nav:
-  - Home: index.md
-  - About: about.md
-theme: readthedocs
