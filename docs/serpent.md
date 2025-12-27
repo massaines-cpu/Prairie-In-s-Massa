@@ -57,5 +57,24 @@ Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de pe
         `drama_lover.append(person)`
 `print(f"Nombre de personnes qui aiment les Drama : {len(drama_lover)}")`
 
+#Nombre de femmes qui aiment la science-fiction
+`femmes_lover = []`
+`for person in people:`
+    `if person["gender"] == "Female":`
+        `films = person["pref_movie"]`
+        `films_converti = films.replace("|","")`
+        `if films == "Sci-Fi":`
+            `femmes_lover.append(person)`
+`print(f"Nombre de femmes qui aiment la science-fiction : {len(femmes_lover)}")`
+### LEVEL 2
+#Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$
+`docu_riche = []`
+`for person in people:`
+    `films = person["pref_movie"].replace("|","")`
+    `income = float(person["income"].replace("$",""))`
+   ` if films == "Documentary" and income > 1482:`
+        `docu_riche.append(person)`
+`print(f"Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}")`
+
 ### LIEN DEPÔT
 [Lien vers exercice]()

@@ -15,7 +15,7 @@ femmes2 = []                        # un tableau vide
 for person in people:               # pour chaque persone du tableau
     if person["gender"] == "Female":  # si c'est un homme (2-266-02250-4)
         femmes2.append(person)      # je l'ajoute au tableau
-print(f"nombre de femmes : {len(femmes2)}")
+print(f"Nombre de femmes : {len(femmes2)}")
 
 #nombre de personne qui cherche homme
 charo = []
@@ -43,8 +43,26 @@ print(f"Nombre de personne qui gagne plus de 2000$ : {len(riche)}")
 #Nombre de personnes qui aiment les Drama 
 drama_lover = []
 for person in people:
-    films = person["pref_movie"]
-    films_converti = films.replace("|","")
+    films = person["pref_movie"].replace("|","")
     if films == "Drama":
         drama_lover.append(person)
 print(f"Nombre de personnes qui aiment les Drama : {len(drama_lover)}")
+
+#Nombre de femmes qui aiment la science-fiction
+femmes_lover = []
+for person in people:
+    if person["gender"] == "Female":
+        films = person["pref_movie"].replace("|","")
+        if films == "Sci-Fi":
+            femmes_lover.append(person)
+print(f"Nombre de femmes qui aiment la science-fiction : {len(femmes_lover)}")
+
+#LEVEL 2
+# Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$
+docu_riche = []
+for person in people:
+    films = person["pref_movie"].replace("|","")
+    income = float(person["income"].replace("$",""))
+    if films == "Documentary" and income > 1482:
+        docu_riche.append(person)
+print(f"Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}")
