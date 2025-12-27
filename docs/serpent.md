@@ -25,14 +25,14 @@ ou faire le nombre total de personnes - le nombre d'hommes
 2. Ce que les personnes cherchent
 Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de personne qui cherche un "F"
 
-#nombre de personne qui cherche homme
+#nombre de personnes qui cherchent homme
 `charo = []`
 `for person in people:`
     `if person["looking_for"] == "M":`
        ` charo.append(person)`
 `print(f"Nombre de personne qui cherchent un homme : {len(charo)}")`
 
-#nombre de personne qui cherche femme
+#nombre de personnes qui cherchent femme
 `charo2 = []`
 `for person in people:`
     `if person["looking_for"] == "F":`
