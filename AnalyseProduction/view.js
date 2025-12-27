@@ -7,6 +7,7 @@ var View = {
 
     var title = document.createElement('h2');
     title.innerText = `#${note.id}`;
+//"tâche 1,2,3"
     title.classList.add('card-title');
     noteHTML.appendChild(title);
 
@@ -19,6 +20,7 @@ var View = {
     validBtn.classList.add('btn');
     validBtn.classList.add('btn-success');
     validBtn.innerText = "Validate";
+    //langue
     validBtn.addEventListener('click', Control.validateNote);
     noteHTML.appendChild(validBtn);
 
