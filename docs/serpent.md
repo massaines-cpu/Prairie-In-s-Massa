@@ -76,5 +76,56 @@ Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de pe
         `docu_riche.append(person)`
 `print(f"Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}")`
 
+#Liste des noms, prénoms, id et revenus des personnes qui gagnent plus de 4000$
+`all_infos = []`
+`for person in people:`
+    `income = float(person["income"].replace("$",""))`
+    `if income > 4000:`
+        `infos = {`
+           ` "nom": person["last_name"],`
+            `"prenom": person["first_name"],`
+            `"id": person["id"],`
+           ` "revenu": income`
+       ` }`
+        `all_infos.append(infos)`
+`#faut print toutes les personnes concernées par 4000`
+`#if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000`
+`print("Liste des personnes qui gagnent plus de 4000$ :")`
+
+`for person in all_infos:`
+    `print(`
+        `"Nom :", person["nom"],`
+       ` ", Prénom :", person["prenom"],`
+        `", ID :", person["id"],`
+        `", Revenu :", person["revenu"], "$")`
+ 
+ #Homme le plus riche (nom et id)
+`homme_riche = people[0]`
+`revenu_max = float(people[0]["income"].replace("$", ""))`
+
+`for person in people:`
+    `if person["gender"] == "Male":`
+        `income = float(person["income"].replace("$",""))`
+`
+        `if income > revenu_max:`
+            `revenu_max = income`
+            `homme_riche = person`
+
+`print(`
+    `"L'homme le plus riche est :",`
+    `homme_riche["last_name"],`
+    `", ID :", homme_riche["id"],`
+    `", Revenu :", revenu_max, "$")`
+
+#Salaire moyen
+`salaires = 0`
+`for person in people:`
+    `income = float(person["income"].replace("$",""))`
+    `salaires = salaires + income`
+    `salaire_moyen = salaires / len(people)`
+
+`print(f"salaire moyen : {salaire_moyen}")`
+`#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire`
+
 ### LIEN DEPÔT
 [Lien vers exercice]()
