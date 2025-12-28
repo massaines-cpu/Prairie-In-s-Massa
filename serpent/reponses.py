@@ -68,7 +68,7 @@ for person in people:
 print(f"Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}")
 
 #Liste des noms, prénoms, id et revenus des personnes qui gagnent plus de 4000$
-all_infos = []
+personnes_riches = []
 for person in people:
     income = float(person["income"].replace("$",""))
     if income > 4000:
@@ -78,12 +78,12 @@ for person in people:
             "id": person["id"],
             "revenu": income
         }
-        all_infos.append(infos)
+        personnes_riches.append(infos)
 #faut print toutes les personnes concernées par 4000
 #if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000
 print("Liste des personnes qui gagnent plus de 4000$ :")
 
-for person in all_infos:
+for person in personnes_riches:
     print(
         "Nom :", person["nom"],
         ", Prénom :", person["prenom"],
@@ -92,7 +92,7 @@ for person in all_infos:
  
  #Homme le plus riche (nom et id)
 homme_riche = people[0]
-revenu_max = float(people[0]["income"].replace("$", ""))
+revenu_max = 0
 
 for person in people:
     if person["gender"] == "Male":
@@ -117,3 +117,73 @@ for person in people:
 
 print(f"salaire moyen : {salaire_moyen}")
 #la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire
+
+#Salaire médian 
+# faut classer les salaires dans un ordre croissant
+# si impair = (n+1) ÷ 2
+# si pair = (n ÷ 2) + 1
+
+salaires = []
+for person in people:
+    income = float(person["income"].replace("$",""))
+    salaires.append(income)
+
+salaires.sort()
+nombre_salaires = len(salaires)
+if nombre_salaires % 2 == 0:
+    salaire_median = (salaires[nombre_salaires // 2 - 1] + salaires[nombre_salaires // 2]) / 2
+else:
+    salaire_median = salaires[nombre_salaires // 2]
+
+print("Salaire médian :", salaire_median)
+
+#Nombre de personnes qui habitent dans l'hémisphère nord 
+#habiter dans l'hemisphere nord equivaut a avoir une latitude positive
+#donc chercher dans people toutes les personnes avec une latitude positive
+
+hemis_nord = 0
+for person in people:
+    latitude = float(person["latitude"])
+    if latitude > 0:
+        hemis_nord += 1
+print(f"Nombre de personnes qui habitent dans l'hémisphère nord :", hemis_nord)
+
+#Salaire moyen des personnes qui habitent dans l'hémisphère sud 
+#d'abord gerer hemisphere sud puis dans hemisphere le salaire
+hemis_sud = 0
+salaires = 0
+for person in people:
+    latitude = float(person["latitude"])
+    if latitude < 0:
+        hemis_sud += 1
+        income = float(person["income"].replace("$",""))
+        salaires += income
+
+salaire_moyen = salaires / hemis_sud
+print(f"Salaire moyen : {salaire_moyen}")
+
+#Personne qui habite le plus près de Bérénice Cawt (nom et id)
+#besoin de savoir les coordonnées de berenice ("latitude":15.5900396,"longitude":-87.879523)
+#person["latitude","longitude"] < berenice["latitude", "longitude" < person["latitude", "longitude"]
+
+berenice_lat = 15.5900396
+berenice_long = -87.879523
+voisine = people[0]
+min_distance = abs(float(voisine["latitude"]) - berenice_lat) + abs(float(voisine["longitude"]) - berenice_long)
+
+for person in people:
+    if person["first_name"] == "Bérénice" and person["last_name"] == "Cawt":
+            continue
+    latitude = float(person["latitude"])
+    longitude = float(person["longitude"])
+    distance = abs(latitude - berenice_lat) + abs(longitude - berenice_long)
+    
+    if distance < min_distance:
+        min_distance = distance
+        voisine = person
+
+print(
+    "La personne la plus proche de Bérénice est :",
+    voisine["first_name"], voisine["last_name"],
+    "| ID :", voisine["id"]
+)
