@@ -82,8 +82,8 @@ for person in people:
 #faut print toutes les personnes concernées par 4000
 #if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000
 print(f"Liste des personnes qui gagnent plus de 4000$ : ")
-for p in personnes_riches:
-    print(f"{p['Prénom']} {p['Nom']} (ID: {p['ID']}) - Revenu: ${p['Revenu']}")
+for person in personnes_riches:
+    print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]}) - Revenu: ${person["revenu"]}")
  
  #Homme le plus riche (nom et id)
 homme_riche = people[0]
@@ -143,6 +143,14 @@ for person in people:
         hemis_nord += 1
 print(f"Nombre de personnes qui habitent dans l'hémisphère nord :", hemis_nord)
 
+#autre technique
+personnes_hemis_nord = []
+for person in people:
+    latitude = float(person["latitude"])
+    if latitude > 0:
+        personnes_hemis_nord.append(person)
+print(f"Nombre de personnes qui habitent dans l'hémisphère nord : {len(personnes_hemis_nord)}")
+
 #Salaire moyen des personnes qui habitent dans l'hémisphère sud 
 #d'abord gerer hemisphere sud puis dans hemisphere le salaire
 hemis_sud = 0
@@ -155,6 +163,20 @@ for person in people:
         salaires += income
 
 salaire_moyen = salaires / hemis_sud
+print(f"Salaire moyen : {salaire_moyen}")
+
+#autre technique
+
+hemis_sud = []
+salaires = 0
+for person in people:
+    latitude = float(person["latitude"])
+    if latitude < 0:
+        hemis_sud.append(person)
+        income = float(person["income"].replace("$",""))
+        salaires += income
+
+salaire_moyen = salaires / len(hemis_sud)
 print(f"Salaire moyen : {salaire_moyen}")
 
 #Personne qui habite le plus près de Bérénice Cawt (nom et id)
@@ -182,3 +204,17 @@ print(
     voisine["first_name"], voisine["last_name"],
     "| ID :", voisine["id"]
 )
+#Les noms et ids des 23 personnes qui travaillent chez google
+google_lover = []
+for person in people:
+    email = person["email"]
+    if "google" in email:
+        infos = {
+            "nom" : person["last_name"],
+            "prenom" : person["first_name"],
+            "id" : person["id"]
+        }
+        google_lover.append(infos)
+print("Les noms et ids des 23 personnes qui travaillent chez google: ")
+for person in google_lover:
+    print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]})")
