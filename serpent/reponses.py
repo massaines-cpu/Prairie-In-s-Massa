@@ -81,14 +81,9 @@ for person in people:
         personnes_riches.append(infos)
 #faut print toutes les personnes concernées par 4000
 #if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000
-print("Liste des personnes qui gagnent plus de 4000$ :")
-
-for person in personnes_riches:
-    print(
-        "Nom :", person["nom"],
-        ", Prénom :", person["prenom"],
-        ", ID :", person["id"],
-        ", Revenu :", person["revenu"], "$")
+print(f"Liste des personnes qui gagnent plus de 4000$ : ")
+for p in personnes_riches:
+    print(f"{p['Prénom']} {p['Nom']} (ID: {p['ID']}) - Revenu: ${p['Revenu']}")
  
  #Homme le plus riche (nom et id)
 homme_riche = people[0]
