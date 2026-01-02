@@ -110,3 +110,4 @@ for person in people:
 print("Les noms et ids des 23 personnes qui travaillent chez google: ")
 for person in google_lover:
     print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]})")
+

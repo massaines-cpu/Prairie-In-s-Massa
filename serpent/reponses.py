@@ -218,3 +218,41 @@ for person in people:
 print("Les noms et ids des 23 personnes qui travaillent chez google: ")
 for person in google_lover:
     print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]})")
+
+#personne la plus âgée
+#y'a pas une bibliotheque pour les calendriers???
+#faut lui dire que cest ce format la "annee"/"mois"/"jour"
+#de le calculer 2026 - "date de naissance"
+from datetime import datetime
+
+la_vieille = people[0]
+age_max = -1 
+for person in people:
+    birthday = person["date_of_birth"]
+    date_naissance = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - date_naissance.year
+    
+    if age > age_max:
+        age_max = age
+        la_vieille = person
+
+print(f"La personne la plus âgée est {la_vieille['first_name']} {la_vieille['last_name']}.\nElle a {age_max} ans en 2026.")
+
+#personne la plus jeune
+#y'a pas une bibliotheque pour les calendriers???
+#faut lui dire que cest ce format la "annee"/"mois"/"jour"
+#de le calculer 2026 - "date de naissance"
+from datetime import datetime
+
+la_jeune = people[0]
+age_mini = 200
+for person in people:
+    birthday = person["date_of_birth"]
+    date_naissance = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - date_naissance.year
+    
+    if age < age_mini:
+        age_mini = age
+        la_jeune = person
+
+print(f"La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_name']}.\nElle a {age_mini} ans en 2026.")
