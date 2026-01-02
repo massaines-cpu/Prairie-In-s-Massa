@@ -95,3 +95,18 @@ print(
     homme_riche["last_name"],
     ", ID :", homme_riche["id"],
     ", Revenu :", salaire_max, "$")
+
+#Les noms et ids des 23 personnes qui travaillent chez google
+google_lover = []
+for person in people:
+    email = person["email"]
+    if "google" in email:
+        infos = {
+            "nom" : person["last_name"],
+            "prenom" : person["first_name"],
+            "id" : person["id"]
+        }
+        google_lover.append(infos)
+print("Les noms et ids des 23 personnes qui travaillent chez google: ")
+for person in google_lover:
+    print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]})")
