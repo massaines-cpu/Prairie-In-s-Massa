@@ -81,7 +81,7 @@ print(f"Liste des personnes qui gagnent plus de 4000$ : ")
 for person in liste_personnes_riches:
     print(f"{person['Prénom']} {person['Nom']} (ID: {person['ID']}) - Revenu: ${person['Revenu']}")
 
-#Homme le plus riche (nom et id)
+#Homme le plus riche (nom et ID)
 homme_riche = people[0]
 salaire_max = 0
 for person in people:
