@@ -285,21 +285,9 @@ for genre_nom in list_genre_film:
 print("le genre le plus populaire est :", genre_gagnant)
 
 #Genres de film par ordre de popularité
+list_genre_film_ordre = {genre: list_genre_film[genre] for genre in sorted(list_genre_film, key=list_genre_film.get)}
 
-#list_genre_film.sort()
-#print(list_genre_film) JARRIVE PAS OK MERDE
+print(list_genre_film_ordre)
+
 
 #Liste des genres de film et nombre de personnes qui les préfèrent
-LIST_GENRE = {}
-
-for person in people:
-    films = person["pref_movie"].replace("|", " ")
-    genres = films.split()
-    for genre in genres:
-        if genre in LIST_GENRE:
-            LIST_GENRE[genre] += 1
-        else: 
-            LIST_GENRE[genre] = 1
-        for person in genre:
-
-print(LIST_GENRE)
