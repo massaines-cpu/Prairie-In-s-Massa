@@ -44,7 +44,7 @@ print(f"Nombre de personne qui gagne plus de 2000$ : {len(riche)}")
 drama_lover = []
 for person in people:
     films = person["pref_movie"].replace("|","")
-    if films == "Drama":
+    if "Drama" in films:
         drama_lover.append(person)
 print(f"Nombre de personnes qui aiment les Drama : {len(drama_lover)}")
 
@@ -53,7 +53,7 @@ femmes_lover = []
 for person in people:
     if person["gender"] == "Female":
         films = person["pref_movie"].replace("|","")
-        if films == "Sci-Fi":
+        if "Sci-Fi" in films:
             femmes_lover.append(person)
 print(f"Nombre de femmes qui aiment la science-fiction : {len(femmes_lover)}")
 
@@ -256,3 +256,20 @@ for person in people:
         la_jeune = person
 
 print(f"La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_name']}.\nElle a {age_mini} ans en 2026.")
+
+#Genre de film le plus populaire
+list_genre_film = {}
+
+for person in people:
+    pref_movie = person["pref_movie"].replace("|", " ")
+    genres = pref_movie.split()
+
+    for genre in genres:
+        if genre in list_genre_film:
+            list_genre_film[genre] += 1
+        else: 
+            list_genre_film[genre] = 1
+
+print(list_genre_film)
+genre_pop = max(list_genre_film)
+print("le genre le plus populaire est :", genre_pop)
