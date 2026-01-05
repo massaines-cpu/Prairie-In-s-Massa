@@ -63,7 +63,7 @@ docu_riche = []
 for person in people:
     films = person["pref_movie"].replace("|","")
     income = float(person["income"].replace("$",""))
-    if films == "Documentary" and income > 1482:
+    if "Documentary" in films and income > 1482:
         docu_riche.append(person)
 print(f"Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}")
 
@@ -261,8 +261,8 @@ print(f"La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_n
 list_genre_film = {}
 
 for person in people:
-    pref_movie = person["pref_movie"].replace("|", " ")
-    genres = pref_movie.split()
+    films = person["pref_movie"].replace("|", " ")
+    genres = films.split()
 
     for genre in genres:
         if genre in list_genre_film:
@@ -271,5 +271,35 @@ for person in people:
             list_genre_film[genre] = 1
 
 print(list_genre_film)
-genre_pop = max(list_genre_film)
-print("le genre le plus populaire est :", genre_pop)
+
+genre_gagnant = ""
+genre_max = 0
+
+for genre_nom in list_genre_film:
+    genre_actuel = list_genre_film[genre_nom] 
+    
+    if genre_actuel > genre_max:
+        genre_max = genre_actuel   
+        genre_gagnant = genre_nom
+
+print("le genre le plus populaire est :", genre_gagnant)
+
+#Genres de film par ordre de popularité
+
+#list_genre_film.sort()
+#print(list_genre_film) JARRIVE PAS OK MERDE
+
+#Liste des genres de film et nombre de personnes qui les préfèrent
+LIST_GENRE = {}
+
+for person in people:
+    films = person["pref_movie"].replace("|", " ")
+    genres = films.split()
+    for genre in genres:
+        if genre in LIST_GENRE:
+            LIST_GENRE[genre] += 1
+        else: 
+            LIST_GENRE[genre] = 1
+        for person in genre:
+
+print(LIST_GENRE)
