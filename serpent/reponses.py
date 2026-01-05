@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
 from termcolor import colored
+from datetime import datetime
 
 with open('people.json', 'r') as p:
     people = json.loads(p.read())
@@ -223,7 +224,6 @@ for person in google_lover:
 #y'a pas une bibliotheque pour les calendriers???
 #faut lui dire que cest ce format la "annee"/"mois"/"jour"
 #de le calculer 2026 - "date de naissance"
-from datetime import datetime
 
 la_vieille = people[0]
 age_max = -1 
@@ -242,7 +242,6 @@ print(f"La personne la plus âgée est {la_vieille['first_name']} {la_vieille['l
 #y'a pas une bibliotheque pour les calendriers???
 #faut lui dire que cest ce format la "annee"/"mois"/"jour"
 #de le calculer 2026 - "date de naissance"
-from datetime import datetime
 
 la_jeune = people[0]
 age_mini = 200
@@ -304,7 +303,6 @@ for person in people:
 print("Liste des genres de film et nombre de personnes qui les préfèrent :", list_genre_film2)
 
 #Age moyen des hommes qui aiment les films noirs
-from datetime import datetime
 
 somme_age = 0
 hommes_noirs = 0
@@ -314,7 +312,7 @@ for person in people:
     films = person["pref_movie"]
     birthday = person["date_of_birth"]
     birthday_convert = datetime.strptime(birthday, "%Y-%m-%d")
-    age = 2026 - date_naissance.year
+    age = 2026 - birthday_convert.year
 
     if genre == "Male" and "Film-Noir" in films:
         hommes_noirs += 1
@@ -323,3 +321,26 @@ for person in people:
 age_moyen = somme_age / hommes_noirs
 
 print(f"Age moyen des hommes qui aiment les films noirs est de {int(age_moyen)} ans ")
+
+#Age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire, de Paris
+lati_paris = 48.8566
+longi_paris = 2.3522
+somme_age2 = 0
+drama_loveuse = 0
+marge = 0.5
+
+for person in people:
+    genre = person["gender"]
+    latitude = float(person["latitude"])
+    longitude = float(person["longitude"])
+    films = person["pref_movie"]
+    birthday = person["date_of_birth"]
+    birthday_convert = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - birthday_convert.year
+    
+    if genre == "Female" and "Drama" in films and abs(latitude - lati_paris) < marge and abs(longitude - longi_paris) < marge:
+        somme_age2 += age
+        drama_loveuse += 1
+
+resultat = somme_age2 / drama_loveuse
+print(f"L'age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire de Paris est de {int(resultat)} ans")
