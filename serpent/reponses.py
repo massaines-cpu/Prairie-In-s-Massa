@@ -270,8 +270,6 @@ for person in people:
         else: 
             list_genre_film[genre] = 1
 
-print(list_genre_film)
-
 genre_gagnant = ""
 genre_max = 0
 
@@ -287,7 +285,41 @@ print("le genre le plus populaire est :", genre_gagnant)
 #Genres de film par ordre de popularité
 list_genre_film_ordre = {genre: list_genre_film[genre] for genre in sorted(list_genre_film, key=list_genre_film.get)}
 
-print(list_genre_film_ordre)
+print("Liste dans l'ordre", list_genre_film_ordre)
 
 
 #Liste des genres de film et nombre de personnes qui les préfèrent
+list_genre_film2 = {}
+
+for person in people:
+    films = person["pref_movie"].replace("|", " ")
+    genres = films.split()
+
+    for genre in genres:
+        if genre in list_genre_film2:
+            list_genre_film2[genre] += 1
+        else: 
+            list_genre_film2[genre] = 1
+
+print("Liste des genres de film et nombre de personnes qui les préfèrent :", list_genre_film2)
+
+#Age moyen des hommes qui aiment les films noirs
+from datetime import datetime
+
+somme_age = 0
+hommes_noirs = 0
+
+for person in people:
+    genre = person["gender"]
+    films = person["pref_movie"]
+    birthday = person["date_of_birth"]
+    birthday_convert = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - date_naissance.year
+
+    if genre == "Male" and "Film-Noir" in films:
+        hommes_noirs += 1
+        somme_age += age
+
+age_moyen = somme_age / hommes_noirs
+
+print(f"Age moyen des hommes qui aiment les films noirs est de {int(age_moyen)} ans ")
