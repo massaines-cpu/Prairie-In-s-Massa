@@ -337,10 +337,13 @@ for person in people:
     birthday = person["date_of_birth"]
     birthday_convert = datetime.strptime(birthday, "%Y-%m-%d")
     age = 2026 - birthday_convert.year
-    
+
     if genre == "Female" and "Drama" in films and abs(latitude - lati_paris) < marge and abs(longitude - longi_paris) < marge:
         somme_age2 += age
         drama_loveuse += 1
 
 resultat = somme_age2 / drama_loveuse
 print(f"L'age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire de Paris est de {int(resultat)} ans")
+
+#Homme qui cherche un homme et habite le plus proche d'un homme qui a au moins une
+#préférence de film en commun (afficher les deux et la distance entre les deux
