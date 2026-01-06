@@ -1,10 +1,9 @@
 import random
 import pandas as pd
 
-
 def generate(n):
     ash_keys = ['a', 'b', 'c', 'd', 'v', '1', '2', '3', 'ref'] # les colonnes de mon df
-    df = pd.DataFrame(columns=ash_keys)                        # crer le df
+    df = pd.DataFrame(columns=ash_keys)                        # créer le df
 
     for i in range(n):                                         # n fois
         bars = set()                                           # un set c'est (presque) comme un tableau mais sans doublon
