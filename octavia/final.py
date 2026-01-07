@@ -4,15 +4,8 @@ from solver import solve, solveDf
 from sklearn import tree
 import matplotlib.pyplot as plt
 
-df = generate(1)
-result = solve(df.loc[0])
-
-df = generate(10)
-
-solved = solveDf(df)
-
 df_train = generate(30)  # 500 pour l'entrainement
-df_test = generate(1000)   # 50 pour tester
+df_test = generate(10)   # 50 pour tester
 df_test = df_test[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']] # pas besoin de v on le calculera au fur et a mesure
 
 # resoudre (remplir v) pour les data d'entrainement
@@ -53,11 +46,5 @@ for i in range(len(df_test)):
     stat.append(int(prediction[0] == solution))
 
 # affichage des résultats
-print("moyenne: ", mean(stat))
-
-dfTest = generate(300)
-repArbre = arbre.predict(dfTest[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']])
-dfTest['vArbre'] = repArbre
-dfTestSolved = solveDf(dfTest)
-bonnesReponses = dfTestSolved[dfTestSolved['v'] == dfTestSolved['vArbre']]
-print(len(bonnesReponses) / len(dfTestSolved) * 100)
+print("moyenne: ", mean(stat)*100)
+pickle.dump(arbre, open("model.pkl", 'wb'))
