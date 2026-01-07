@@ -4,7 +4,7 @@ from strategy import rand
 import random
 
 # def partie():
-def rand():
+def strategy(strategy_humain, strategy_robot):
     pioche = [
         Carte(0, 'R'),
         Carte(1, 'R'),
