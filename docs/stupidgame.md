@@ -7,28 +7,29 @@
 #### Pour la valeur des cartes
 
 ```python
-class Carte:
+class Carte: #represente une carte du jeu
     def __init__(self, value, shape):
-        self.value = value
+        self.value = value   #chaque carte contient ces 2 informations
         self.shape = shape
     def __str__(self):
-        return self.shape + str(self.value)
+        return self.shape + str(self.value) #lisibilité, R3 OU C1
     def getValue(selfself):
-        return self.value
+        return self.value #on a la valeur de la carte
 ```
 #### Pour les données des joueurs
 ```python
-class Player:
+class Player: #classe du joueur, donc ses infos
     def __init__(self, name : str, strategy):
-        self.name = name
-        self.hand = []
-        self.strategy = strategy
+        self.name = name #humain ou robot
+        self.hand = []  #cartes dans la main
+        self.strategy = strategy #strat pour quelle carte jouer
     def __str__(self):
-        return self.name + ": " + str([str(carte) for carte in self.hand])
-    # def play(self):
-    #     return self.hand.pop(-1)
+        return self.name + ": " + str([str(carte) for carte in self.hand]) #visibilité sur nom joueur + ses cartes
     def play(self):
-        return self.strategy(self.hand)
+        return self.hand.pop(-1) #aleatoire
+    def play(self): #soit l'un ou l'autre par contre
+        return self.strategy(self.hand) #on integre strat
+
 ```
 ### Code pour créer le jeu sans stratégie (au hasard)
 ```python
@@ -52,9 +53,9 @@ def partie():
     assert len(pioche) == 10
     random.shuffle(pioche)
     humain = Player('humain', rand)
-    robot = Player('robot', rand)
+    robot = Player('robot', rand) #mode alearoire
 
-    while len(pioche):
+    while len(pioche): #distribution
         carte = pioche.pop(-1)
         humain.hand.append(carte)
         carte = pioche.pop(-1)
@@ -64,16 +65,16 @@ def partie():
 
     point_robot = 0
     point_humain = 0
-    for tour in range(5):
+    for tour in range(5): #5tours
         carte_humain = humain.play()
         carte_robot = robot.play()
 
-        if carte_robot.value >= carte_humain.value:
+        if carte_robot.value >= carte_humain.value: #on compare
             point_robot += 1
         else:
             point_humain += 1
 
-    if point_robot >= 3:
+    if point_robot >= 3: #joueur qui gg en moins de 3 manches
         return 'robot'
     else:
         return 'humain'
@@ -81,7 +82,7 @@ def partie():
 #### Pourcentage de victoire du robot
 ```python
 victoires_robot = 0
-nb_parties = 10000
+nb_parties = 10000 #plus c'est eleve + c'est fiable
 
 for i in range(nb_parties):
     gagnant = partie()
@@ -98,7 +99,7 @@ from card import Card
 
 def rand(hand):
     random.shuffle(hand)
-    return hand.pop()
+    return hand.pop() #bon la c'est la strat pas strat, uniquement aleatoire
 
 def plusGrande(hand, carte):
     hand.sort(key=lambda carte: carte.value)
@@ -112,7 +113,7 @@ def smart(hand, carte):
     if carte:
         hand.sort(key=lambda c: c.value)
         for c in hand:
-            if c.value > carte.value:
+            if c.value > carte.value: #sadapte en fonction adversaire, si cette carte alors joue celle la
                 hand.remove(c)
                 return c
     return plusPetite(hand, carte)
@@ -125,7 +126,7 @@ from player import Player
 from strategy import rand
 
 
-def partie(strategy_humain, strategy_robot):
+def partie(strategy_humain, strategy_robot): #choix de strat pour chaque joueur
     # les cartes
     pioche = [
         Card(0, "R"),
@@ -154,8 +155,8 @@ def partie(strategy_humain, strategy_robot):
     # tours
     points_du_robot = 0
     for tour in range(5):
-        carte_du_robot = robot.play()
-        carte_de_humain = humain.play(carte_du_robot)
+        carte_du_robot = robot.play() #lerobot joue en premier
+        carte_de_humain = humain.play(carte_du_robot) #lhumain joue en fonction du coup
         if carte_du_robot.value >= carte_de_humain.value:
             points_du_robot += 1
     # victoire
@@ -163,18 +164,6 @@ def partie(strategy_humain, strategy_robot):
         return robot
     else:
         return humain
-# card.py
-
-class Card:
-    def __init__(self, value: int, shape: str):
-        self.value = value
-        self.shape = shape
-
-    def getValue(self):
-        return self.value
-
-    def __str__(self):
-        return self.shape + str(self.value)
 ```
 ## Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/tree/initiale/stupidcard)
