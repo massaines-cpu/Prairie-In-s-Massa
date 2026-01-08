@@ -2,7 +2,7 @@ import random
 from card import Carte
 from player import Player
 from strategy import rand
-
+import matplotlib.pyplot as plt
 
 def partie(strategy_humain, strategy_robot):
     # les cartes

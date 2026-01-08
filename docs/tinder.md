@@ -140,6 +140,84 @@ for person in people:
 print(f"salaire moyen : {salaire_moyen}")
 #la moyenne c'est tout les salaires additionnés divisé par le nombre de salaires
 ```
+## Personne qui habite le plus près de Bérénice Cawt (nom et id)
+```python
+#besoin de savoir les coordonnées de berenice ("latitude":15.5900396,"longitude":-87.879523)
+#person["latitude","longitude"] < berenice["latitude", "longitude" < person["latitude", "longitude"]
+
+berenice_lat = 15.5900396
+berenice_long = -87.879523
+voisine = people[0]
+min_distance = abs(float(voisine["latitude"]) - berenice_lat) + abs(float(voisine["longitude"]) - berenice_long)
+
+for person in people:
+    if person["first_name"] == "Bérénice" and person["last_name"] == "Cawt":
+            continue
+    latitude = float(person["latitude"])
+    longitude = float(person["longitude"])
+    distance = abs(latitude - berenice_lat) + abs(longitude - berenice_long)
+    
+    if distance < min_distance:
+        min_distance = distance
+        voisine = person
+
+print(
+    "La personne la plus proche de Bérénice est :",
+    voisine["first_name"], voisine["last_name"],
+    "| ID :", voisine["id"]
+)
+```
+## Les noms et ids des 23 personnes qui travaillent chez google
+```python
+google_lover = []
+for person in people:
+    email = person["email"]
+    if "google" in email:
+        infos = {
+            "nom" : person["last_name"],
+            "prenom" : person["first_name"],
+            "id" : person["id"]
+        }
+        google_lover.append(infos)
+print("Les noms et ids des 23 personnes qui travaillent chez google: ")
+for person in google_lover:
+    print(f"{person["prenom"]} {person["nom"]} (ID: {person["id"]})")
+```
+## Personne la plus âgée
+```python
+#y'a pas une bibliotheque pour les calendriers???
+#faut lui dire que cest ce format la "annee"/"mois"/"jour"
+#de le calculer 2026 - "date de naissance"
+
+la_vieille = people[0]
+age_max = -1 
+for person in people:
+    birthday = person["date_of_birth"]
+    date_naissance = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - date_naissance.year
+    
+    if age > age_max:
+        age_max = age
+        la_vieille = person
+
+print(f"La personne la plus âgée est {la_vieille['first_name']} {la_vieille['last_name']}.\nElle a {age_max} ans en 2026.")
+```
+## Personne la plus jeune
+
+```python
+la_jeune = people[0]
+age_mini = 200
+for person in people:
+    birthday = person["date_of_birth"]
+    date_naissance = datetime.strptime(birthday, "%Y-%m-%d")
+    age = 2026 - date_naissance.year
+    
+    if age < age_mini:
+        age_mini = age
+        la_jeune = person
+
+print(f"La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_name']}.\nElle a {age_mini} ans en 2026.")
+```
 Bon j'ai pas tout mis car tout est dispo sur le lien, je me suis arrêtée à "Age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire, de Paris"
 ## Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/serpent/reponses.py)

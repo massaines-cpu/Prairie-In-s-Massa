@@ -8,7 +8,7 @@
 4. [Quarta: Tableau](tableau.md)
 5. [Quinta: SQL](SQL.md)
 6. [Sexta: Analyse](analyse.md)
-7. [Septima: Tinder](serpent.md)
+7. [Septima: Tinder](tinder.md)
 8. [Octavia: Arbre de décision](arbre.md)
 9. [Nona: L'humain et le robot](stupidgame.md)
 
