@@ -10,7 +10,6 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch
 
 ![wireframe](images/oui-ref.png)
 
-
 ## Les définitions des fonctions
 ### Fonction 1 : Création du tableau
 ```
@@ -68,7 +67,7 @@ def solveDf(df):
 ```
 
 ### Code final
-```commandline
+```python
 from arbre import generate
 from numpy import mean
 from solver import solve, solveDf
