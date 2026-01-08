@@ -3,8 +3,7 @@ from player import Player
 from strategy import rand
 import random
 
-# def partie():
-def strategy(strategy_humain, strategy_robot):
+def partie():
     pioche = [
         Carte(0, 'R'),
         Carte(1, 'R'),
