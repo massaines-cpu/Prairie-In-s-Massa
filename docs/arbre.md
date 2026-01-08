@@ -7,7 +7,9 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch
 - Introduction des bibliothèques Pandas, Numpy, Sklearn, Matplotlib
 - Définir des fonctions qui vont être liées à notre code final, DP strategy ?
 ## Arbre décisionnel
-![Arbre](images/ref.png)
+
+![Arbre](images/oui-ref.png)
+
 ## Les définitions des fonctions
 ### Fonction 1 : Création du tableau
 ```
