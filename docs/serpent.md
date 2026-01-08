@@ -13,6 +13,7 @@ Elles doivent être dans people.json.
 
 ## Partie 2 : Questions
 - j'ai pris la même forme de boucle à chaque fois (à peu près) et je l'adapte
+
 1. Pour nombre de femmes :
 ```python
 print(colored("Nombre de femmes : ", 'yellow'))

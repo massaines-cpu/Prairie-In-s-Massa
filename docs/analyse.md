@@ -28,7 +28,7 @@ Objectif : Analyser et produire une application
 
 ### Diagramme d’activité
 
-![Diagramme use case](images/activite.png)
+![Diagramme use case](images/1.png)
 
 ### Wireframe
 
@@ -39,9 +39,6 @@ Objectif : Analyser et produire une application
 3. Cas 3
 ![wireframe](images/cas3.png)
 
-### Class diagram
-
-![class](images/class.png)
 
 ### Liste des interventions à moderniser
 
