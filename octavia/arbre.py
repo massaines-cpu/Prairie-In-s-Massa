@@ -9,7 +9,7 @@ def generate(n):
         bars = set()                                           # un set c'est (presque) comme un tableau mais sans doublon
         while len(bars) < 3:                                   # je crée les 3 barres.
             bars.add(random.randrange(1, 11))                  # Comme c'est un set il ne peut pas y avoir deux barres de la même taille
-                                                               # je mets un while car je dois créer des abrs jusqu'à ce que j'en ai 3
+                                                               # je mets un while car je dois créer des arbres jusqu'à ce que j'en ai 3
 
         bars = list(bars)                                      # je transforme en list c'est plus pratique qu'un set
         bonne_reponse = random.randrange(1, 3)                 # choisir au hasard une barre 

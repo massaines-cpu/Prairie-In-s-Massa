@@ -1,0 +1,1 @@
+# [StuPid gAMe](index.md)

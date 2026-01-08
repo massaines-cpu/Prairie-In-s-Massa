@@ -1,7 +1,7 @@
 
-# EXERCICE PYTHON
+# [Exerice Tinder](index.md)
 
-Objectif : Vous devez écrire le code qui permet d’afficher la réponse à chacune de ces questions.
+Objectif : Écrire un code qui permet d’afficher la réponse à chacune de ces questions.
 
 ## Partie 1 : Analyse
 il y a un code qui permet d'afficher les réponses, donc les réponses sont déjà presentes dans le document... il faut trouver un moyen de les récupérer et de les afficher.

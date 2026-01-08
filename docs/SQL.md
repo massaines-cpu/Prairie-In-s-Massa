@@ -1,4 +1,4 @@
-# EXERCICE SQL
+# [Exercice SQL](index.md)
 
 Objectif : Créer une base de données, sous forme de tableau avec MySQL
 
