@@ -49,7 +49,7 @@ print(f"Nombre de personne qui cherchent une femme : {len(charo2)}")
 riche = []
 for person in people:
     argent = person["income"]
-    argent_converti = float(argent.replace("$",""))
+    argent_converti = float(argent.replace("$","")) #converti pcq c'est sous forme de texte a cause de $
     if argent_converti > 2000:
         riche.append(person)
 print(f"Nombre de personne qui gagne plus de 2000$ : {len(riche)}")
@@ -184,7 +184,7 @@ for person in google_lover:
 ```
 ## Personne la plus âgée
 ```python
-#y'a pas une bibliotheque pour les calendriers???
+#y'a pas une bibliotheque pour les calendriers??? OUI from datetime import datetime
 #faut lui dire que cest ce format la "annee"/"mois"/"jour"
 #de le calculer 2026 - "date de naissance"
 
