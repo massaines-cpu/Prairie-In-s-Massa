@@ -1,6 +1,5 @@
 from card import Carte
 from player import Player
-from strategy import rand
 import random
 
 def partie():

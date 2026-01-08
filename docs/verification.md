@@ -1,4 +1,4 @@
-# Exercice de vérification
+# [Exercice de vérification](index.md)
 
 Objectif : Verifier si Python, Node sont présents et que 2+2 font 4.
 
