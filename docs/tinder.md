@@ -75,7 +75,6 @@ for person in people:
             femmes_lover.append(person)
 print(f"Nombre de femmes qui aiment la science-fiction : {len(femmes_lover)}")
 ```
-### LEVEL 2
 ## Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$
 ```python
 docu_riche = []
