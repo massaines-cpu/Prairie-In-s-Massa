@@ -10,6 +10,7 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch
 
 ![Arbre](images/oui-ref.png)
 
+
 ## Les définitions des fonctions
 ### Fonction 1 : Création du tableau
 ```
