@@ -19,9 +19,9 @@ i = 0
 #on part de 0
 #pas de doublon
 while i < len(prenoms):
-    groupe = prenoms[i:i+k]
-    groupes.append(groupe)
-    i = i + k
+    groupe = prenoms[i:i+k] #prend ls 4 personnes suivant dans la liste
+    groupes.append(groupe) #ajout
+    i += k # on avance de 4 pour prochain groupe
 
 print(groupes)
 

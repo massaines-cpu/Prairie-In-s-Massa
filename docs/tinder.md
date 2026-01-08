@@ -219,4 +219,4 @@ print(f"La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_n
 ```
 Bon j'ai pas tout mis car tout est dispo sur le lien, je me suis arrêtée à "Age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire, de Paris"
 ## Lien dépôt
-[Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/serpent/reponses.py)
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/tinder/reponses.py)

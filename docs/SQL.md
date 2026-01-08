@@ -21,11 +21,11 @@ CREATE TABLE City (
 
 FOREIGN KEY (PoB) REFERENCES City(ID) #pour poB lié à ID de city
 
+INSERT INTO People (PoB, nom, heigh, date_of_birth)
+VALUES (266, 'Jason Derulo', 1.55, '1923-09-27');
+
 INSERT INTO City (nom, lat, lon) #d'abord la ville pour qu'elle ait un ID
 VALUES ('Jason Derulo', 1.198, 4.987);
-
-NSERT INTO People (PoB, nom, heigh, date_of_birth)
-VALUES (266, 'Jason Derulo', 1.55, '1923-09-27', 1);
 
 ```
 ### Lien dépôt
