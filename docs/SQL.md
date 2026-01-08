@@ -12,5 +12,5 @@ VALUES (266, 'Jason Derulo', 1.55, '1923-09-27');
 INSERT INTO City (nom, lat, lon)
 VALUES ('Jason Derulo', 1.198, 4.987);
 
-## LIEN DEPÔT
-[Lien vers exercice]()
+## Lien dépôt
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/tree/initiale/SQL)

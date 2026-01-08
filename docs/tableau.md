@@ -1,4 +1,4 @@
-# Exercice tableau groupes
+# [Exercice tableau groupes](index.md)
 
 Objectif : Créer des sous groupes avec tous les prénoms repartis de manière aléatoire.
 

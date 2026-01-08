@@ -126,5 +126,5 @@ Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de pe
 `print(f"salaire moyen : {salaire_moyen}")`
 `#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire`
 
-### LIEN DEPÔT
+## Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/serpent/reponses.py)

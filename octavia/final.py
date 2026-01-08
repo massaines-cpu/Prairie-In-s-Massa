@@ -8,7 +8,7 @@ df_train = generate(30)  # 500 pour l'entrainement
 df_test = generate(10)   # 50 pour tester
 df_test = df_test[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']] # pas besoin de v on le calculera au fur et a mesure
 
-# resoudre (remplir v) pour les data d'entrainement
+# résoudre (remplir v) pour les data d'entrainement
 df_train = solveDf(df_train)
 
 # séparer in et out

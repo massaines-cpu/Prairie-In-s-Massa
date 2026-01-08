@@ -68,5 +68,5 @@ Par rapport au code :
 
 3. Structurer davantage le code pour améliorer sa compréhension.
 
-### LIEN DEPÔT
+## Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/AnalyseProduction)
