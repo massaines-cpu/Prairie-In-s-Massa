@@ -6,7 +6,8 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch
 
 - Introduction des bibliothèques Pandas, Numpy, Sklearn, Matplotlib
 - Définir des fonctions qui vont être liées à notre code final, DP strategy ?
-
+## Arbre décisionnel
+![Arbre](images/ref.png)
 ## Les définitions des fonctions
 ### Fonction 1 : Création du tableau
 ```
@@ -49,7 +50,7 @@ if __name__ == "__main__":
     print(df)
 
 ```
-### Fonction 2 : ??????????
+### Fonction 2 : ??????????burn out
 ```
 def solve(line):
     if line['1'] == line['ref']: return 1

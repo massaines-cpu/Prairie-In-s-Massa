@@ -42,3 +42,4 @@ def partie(strategy_humain, strategy_robot):
         return 'robot'
     else:
         return 'humain'
+

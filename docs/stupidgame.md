@@ -30,7 +30,7 @@ class Player:
     def play(self):
         return self.strategy(self.hand)
 ```
-### Code pour créer le jeu sans stratégie
+### Code pour créer le jeu sans stratégie (au hasard)
 ```python
 from card import Carte
 from player import Player
