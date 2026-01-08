@@ -84,8 +84,7 @@ victoires_robot = 0
 nb_parties = 10000
 
 for i in range(nb_parties):
-    # gagnant = partie()
-    gagnant = partie(rand, rand)
+    gagnant = partie()
     if gagnant == 'robot':
         victoires_robot += 1
 taux = (victoires_robot / nb_parties) * 100
