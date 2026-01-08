@@ -1,4 +1,4 @@
-# [StuPid gAMe](index.md)
+# [Jeu robot humain](index.md)
 
 **Objectif** : Coder un jeu de cartes entre un humain et un robot, puis intégrer une stratégie de jeu dans le système pour faire en sorte que l'humain ou le robot gagne à chaque fois
 
