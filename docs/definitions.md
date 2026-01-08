@@ -1,9 +1,9 @@
 
-# EXERCICE DEFINITIONS
+# Définitions
 
 Objectif : Définir des termes basiques du web
 
-## Définitions
+## Liste des définitions
 
 1. **HTTP** : protocole
 2. **GET**: appartient à HTTP, c'est des méthodes quand on veut récupérer quelque chose exemples : POST, UPDATE, DELETE, PUT, HEAD

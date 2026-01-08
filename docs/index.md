@@ -1,19 +1,17 @@
 # Documentation Inès Massa
 
+## Sommaire
+
+1. [Prima: Vérification](verification.md)
+2. [Seconda: Ce site](index.md)
+3. [Tertia: Définitions](definitions.md)
+4. [Quarta: Tableau](tableau.md)
+5. [Quinta: SQL](SQL.md)
+6. [Sexta: Analyse](analyse.md)
+7. [Septima: Tinder](serpent.md)
+8. [Octavia: Arbre de décision](arbre.md)
+9. [Nona: L'humain et le robot](stupidgame.md)
 
 
-## Modifier la documentation
-
-1. Ouvrir le dépôt du projet
-2. Aller dans le dossier Ma Docu
-3. Modifier ou créer un fichier MD
-4. Enregistrer les changements ATTENTION
-
-## Publier les changements
-
-1. Valider les modifications avec gitGit
-2. Envoyer les changements sur la branche principale IMPORTANT
-
-## Voilà !!!!!
 
 Pour plus de documentation n'hésitez pas à ne pas me contacter

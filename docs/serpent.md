@@ -106,7 +106,6 @@ Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de pe
 `for person in people:`
     `if person["gender"] == "Male":`
         `income = float(person["income"].replace("$",""))`
-`
         `if income > revenu_max:`
             `revenu_max = income`
             `homme_riche = person`
@@ -128,4 +127,4 @@ Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de pe
 `#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire`
 
 ### LIEN DEPÔT
-[Lien vers exercice]()
+[Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/serpent/reponses.py)

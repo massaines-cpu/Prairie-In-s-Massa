@@ -2,7 +2,7 @@
 
 Objectif : Analyser et produire une application
 
-## Partie 1 : Analyse
+## Analyse
 
 ### Les cas d’utilisations
 
