@@ -3,33 +3,30 @@
 Objectif : Créer des sous groupes avec tous les prénoms repartis de manière aléatoire.
 
 ## Version Python
-> **Note :** pour aleatoire
-`import random`
-`prenoms = ["Inès", "Asma", "Khrisly", "Yacine", "Ludovic", "Manon", "Lilian", "Manar", "Ahmadola", "Noemie", "Danitza" ]`
 
-> **Note :** vide pour l'instant
-`groupes = []`
+```python
+import random
+#pour aleatoire
+prenoms = ["Inès", "Asma", "Khrisly", "Yacine", "Ludovic", "Manon", "Lilian", "Manar", "Ahmadola", "Noemie", "Danitza" ]
 
-> **Note :** vide pour l'instant bim les prenoms vont etre melangés
+groupes = []
+#vide pour l'instant
+random.shuffle(prenoms)
+#bim les prenoms vont etre melangés
+k = 4
+#test groupe de 4 personnes
+i = 0
+#on part de 0
+#pas de doublon
+while i < len(prenoms):
+    groupe = prenoms[i:i+k]
+    groupes.append(groupe)
+    i = i + k
 
-> **Note :** les prenoms vont etre melangés
-`random.shuffle(prenoms)`
+print(groupes)
 
-> **Note :** test groupe de 4 personnes
-`k = 4`
-
-> **Note :** on part de 0, pas de doublon
-`i = 0`
-
-> **Note :** boucle
-`while i < len(prenoms):`
-    `groupe = prenoms[i:i+k]`
-    `groupes.append(groupe)`
-    `i = i + k`
-
-`print(groupes)`
+```
 
 
-
-### LIEN DEPÔT
+### Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-In-s-Massa/tree/initiale/Tableaux)

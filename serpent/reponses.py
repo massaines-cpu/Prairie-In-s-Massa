@@ -112,7 +112,7 @@ for person in people:
     salaire_moyen = salaires / len(people)
 
 print(f"salaire moyen : {salaire_moyen}")
-#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire
+#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaires
 
 #Salaire médian 
 # faut classer les salaires dans un ordre croissant

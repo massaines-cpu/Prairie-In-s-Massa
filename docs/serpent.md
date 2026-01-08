@@ -15,14 +15,14 @@ Elles doivent être dans people.json.
 - j'ai pris la même forme de boucle à chaque fois (à peu près) et je l'adapte
 1. Pour nombre de femmes :
 ```python
-`print(colored("Nombre de femmes : ", 'yellow'))`
-`femmes = [p for p in people if p['gender'] == 'Female']`
-`pprint(len(femmes))`
+print(colored("Nombre de femmes : ", 'yellow'))
+femmes = [p for p in people if p['gender'] == 'Female']
+pprint(len(femmes))
 ```
 ou faire le nombre total de personnes - le nombre d'hommes
 ```python
-`femmes = 1000-491`
-`print(f"Nombre de femmes : {femmes}")`
+femmes = 1000-491
+print(f"Nombre de femmes : {femmes}")
 ```
 2. Ce que les personnes cherchent
 Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de personne qui cherche un "F"
@@ -105,38 +105,40 @@ for person in people:
 for person in all_infos:
     print(
         "Nom :", person["nom"],
-        ", Prénom :", person["prenom"],`
-        `", ID :", person["id"],`
-        `", Revenu :", person["revenu"], "$")`
+        ", Prénom :", person["prenom"],
+        ", ID :", person["id"],
+        ", Revenu :", person["revenu"], "$")
  ```
  ## Homme le plus riche (nom et id)
 ```python
-`homme_riche = people[0]`
-`revenu_max = float(people[0]["income"].replace("$", ""))`
+homme_riche = people[0]
+revenu_max = 0
 
-`for person in people:`
-    `if person["gender"] == "Male":`
-        `income = float(person["income"].replace("$",""))`
-        `if income > revenu_max:`
-            `revenu_max = income`
-            `homme_riche = person`
+for person in people:
+    if person["gender"] == "Male":
+        income = float(person["income"].replace("$",""))
 
-`print(`
-    `"L'homme le plus riche est :",`
-    `homme_riche["last_name"],`
-    `", ID :", homme_riche["id"],`
-    `", Revenu :", revenu_max, "$")`
+        if income > revenu_max:
+            revenu_max = income
+            homme_riche = person
+
+print(
+    "L'homme le plus riche est :",
+    homme_riche["last_name"],
+    ", ID :", homme_riche["id"],
+    ", Revenu :", revenu_max, "$")
 ```
 ## Salaire moyen
 ```python
-`salaires = 0`
-`for person in people:`
-    `income = float(person["income"].replace("$",""))`
-    `salaires = salaires + income`
-    `salaire_moyen = salaires / len(people)`
+salaires = 0
+for person in people:
+    income = float(person["income"].replace("$",""))
+    salaires = salaires + income
+    salaire_moyen = salaires / len(people)
 
-`print(f"salaire moyen : {salaire_moyen}")`
-#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaire`
+print(f"salaire moyen : {salaire_moyen}")
+#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaires
 ```
+Bon j'ai pas tout mis car tout est dispo sur le lien, je me suis arrêtée à "Age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire, de Paris"
 ## Lien dépôt
 [Lien vers exercice](https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/serpent/reponses.py)
