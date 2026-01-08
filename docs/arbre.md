@@ -8,7 +8,7 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch
 - Définir des fonctions qui vont être liées à notre code final, DP strategy ?
 ## Arbre décisionnel
 
-![Arbre](images/oui-ref.png)
+![wireframe](images/oui-ref.png)
 
 
 ## Les définitions des fonctions
