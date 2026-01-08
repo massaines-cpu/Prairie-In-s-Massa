@@ -98,10 +98,10 @@ for person in people:
             "id": person["id"],
             "revenu": income
         }
-        `all_infos.append(infos)`
-`#faut print toutes les personnes concernées par 4000`
-`#if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000`
-`print("Liste des personnes qui gagnent plus de 4000$ :")`
+        `all_infos.append(infos)
+#faut print toutes les personnes concernées par 4000
+#if person["income"]>4000 print person["income"].[name].[prenom].[id]>4000
+print("Liste des personnes qui gagnent plus de 4000$ :")
 
 for person in all_infos:
     print(
