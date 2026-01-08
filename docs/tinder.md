@@ -110,7 +110,7 @@ for person in all_infos:
         ", ID :", person["id"],
         ", Revenu :", person["revenu"], "$")
  ```
- ## Homme le plus riche (nom et id)
+## Homme le plus riche (nom et id)
 ```python
 homme_riche = people[0]
 revenu_max = 0
