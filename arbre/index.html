@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Exercice Asch Expérience - Documentation Inès Massa</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Exercice Asch Exp\u00e9rience";
+        var mkdocs_page_input_path = "arbre.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation Inès Massa
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Documentation Inès Massa</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SQL/">Exercice SQL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../analyse/">Exercice analyse et production</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Exercice Asch Expérience</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ce-qui-a-ete-aborde">Ce qui a été abordé</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arbre-decisionnel">Arbre décisionnel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resume">Résumé</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creation-du-tableau">Création du tableau</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../definitions/">Définitions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stupidgame/">Jeu robot humain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tableau/">Exercice tableau groupes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tinder/">Exerice Tinder</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../verification/">Exercice de vérification</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation Inès Massa</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Exercice Asch Expérience</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="exercice-asch-experience"><a href="../">Exercice Asch Expérience</a></h1>
+<p>Objectif : Créer un arbre de décision pour l’expérience de Asch et un burn-out</p>
+<h2 id="ce-qui-a-ete-aborde">Ce qui a été abordé</h2>
+<ul>
+<li>Introduction aux bibliothèques Pandas, Numpy, Sklearn, Matplotlib</li>
+<li>Définir des fonctions qui vont être liées à notre code final, DP strategy ?</li>
+<li>Remise en question massive de ma vie</li>
+</ul>
+<h2 id="arbre-decisionnel">Arbre décisionnel</h2>
+<p><img alt="wireframe" src="../images/oui-ref.png" /></p>
+<h2 id="resume">Résumé</h2>
+<ol>
+<li>generate(n) = crée les données aléatoires </li>
+<li>solve(line) = donne la réponse correcte pour une ligne </li>
+<li>solveDf(df) = remplit la colonne v avec toutes les réponses correctes</li>
+<li>On entraîne un arbre de décision sur ces données </li>
+<li>On teste l’arbre et on calcule le pourcentage de bonnes réponses</li>
+</ol>
+<h2 id="creation-du-tableau">Création du tableau</h2>
+<pre><code class="language-python">import random
+import pandas as pd #pour faire des tb
+
+def generate(n):
+    ash_keys = ['a', 'b', 'c', 'd', 'v', '1', '2', '3', 'ref'] #colonne tableau
+    df = pd.DataFrame(columns=ash_keys) #création   
+
+    for i in range(n):    #on fait une boucle avec le nombre de bar                                     
+        bars = set()         #crée un tableau sans doublon                                
+        while len(bars) &lt; 3:     #on doit créer un arbre jusqu'a ce qu'il y en ait 3                              
+            bars.add(random.randrange(1, 11)) # crée ensemble de 3 nombres aléatoires entre 1 et 10.
+
+        bars = list(bars)       #on converti en list car plus simple                               
+        bonne_reponse = random.randrange(1, 3)           #on choisit une barre au hasard   
+        ref = bars[bonne_reponse -1]                 #on fait que cette barre soit la ref                  
+        choix_des_complices = random.randrange(1, 3) 
+
+        while bars[choix_des_complices -1] == ref:            
+            choix_des_complices = random.randrange(1, 3) #on choisit au hasard jusqu'à que ce soit faux
+
+        df = pd.concat([df, pd.DataFrame([[   #on ajoute la ligne                 
+            choix_des_complices, # a
+            choix_des_complices, # b
+            choix_des_complices, # c
+            choix_des_complices, # d,
+            None,                # v
+            bars[0],             # 1
+            bars[1],             # 2
+            bars[2],             # 3
+            ref                  # ref
+        ]], columns=ash_keys)])
+
+    return df
+
+if __name__ == &quot;__main__&quot;:
+    df = generate(10)
+    print(df)
+
+</code></pre>
+<h1 id="solve-et-solvedf">Solve et solveDf</h1>
+<pre><code class="language-python">def solve(line):
+    if line['1'] == line['ref']: return 1
+    if line['2'] == line['ref']: return 2
+    return 3
+# si la première bar est la référence, renvoie 1
+# si la deuxième, renvoie 2
+# si, renvoie 3
+
+def solveDf(df):
+    df['v'] = df.apply(solve, axis=1)
+    return df
+#v aura toujours bonne reponse car on tuilise solve
+</code></pre>
+<h1 id="code-final">Code final</h1>
+<pre><code class="language-python">from arbre import generate
+from numpy import mean
+from solver import solve, solveDf
+from sklearn import tree
+import matplotlib.pyplot as plt
+
+df_train = generate(500)  # 500 pour l'entrainement
+df_test = generate(50)   # 50 pour tester
+df_test = df_test[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']] # pas besoin de v on le calculera au fur et a mesure
+
+# résoudre (remplir v) pour les lignes entrainement
+df_train = solveDf(df_train) 
+
+# séparer in et out
+inputs = df_train[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']] #toutes les données necessaires
+output = df_train[['v']] #la reponse correcte
+
+# créer l'arbre
+arbre = tree.DecisionTreeClassifier()
+
+# entrainer l'arbre
+arbre = arbre.fit(inputs, output)
+
+dfTest = generate(1)
+print(dfTest)
+
+repArbre = arbre.predict(dfTest[['a', 'b', 'c', 'd', '1', '2', '3', 'ref']])
+repSolver = solve(dfTest.loc[0]) #on test larbre et on compare avec la reponse correcte (fournie par solve)
+
+print(repArbre, repSolver)
+
+#calcul pourcentage bonne réponse..........
+stat = []
+# pour chaque ligne du df de test
+for i in range(len(df_test)):
+    # récupérer la ligne
+    row = df_test.iloc[[i]]
+    # faire la prédiction à partir de la ligne (sans v) iloc....
+    prediction = arbre.predict(row)
+    # faire la prédiction avec le solver
+    solution = solve(row.loc[0])
+    # stocker 0 (erreur de l'arbre) ou 1 (réussite de l'arbre)
+    stat.append(int(prediction[0] == solution))
+
+# affichage des résultats
+print(&quot;moyenne: &quot;, mean(stat)*100)
+pickle.dump(arbre, open(&quot;model.pkl&quot;, 'wb'))
+</code></pre>
+<h2 id="lien-depot">Lien dépôt</h2>
+<p><a href="https://github.com/massaines-cpu/Prairie-Ines-Massa/tree/initiale/octavia">Lien vers exercice</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../analyse/" class="btn btn-neutral float-left" title="Exercice analyse et production"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../definitions/" class="btn btn-neutral float-right" title="Définitions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../analyse/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../definitions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

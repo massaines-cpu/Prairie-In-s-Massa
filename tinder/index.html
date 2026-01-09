@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Exerice Tinder - Documentation Inès Massa</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Exerice Tinder";
+        var mkdocs_page_input_path = "tinder.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation Inès Massa
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Documentation Inès Massa</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SQL/">Exercice SQL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../analyse/">Exercice analyse et production</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../arbre/">Exercice Asch Expérience</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../definitions/">Définitions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stupidgame/">Jeu robot humain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tableau/">Exercice tableau groupes</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Exerice Tinder</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#partie-1-analyse">Partie 1 : Analyse</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#partie-2-questions">Partie 2 : Questions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-personnes-qui-cherchent-homme">Nombre de personnes qui cherchent homme</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-personnes-qui-cherchent-femme">Nombre de personnes qui cherchent femme</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-personnes-qui-gagnent-plus-de-2000">Nombre de personnes qui gagnent plus de 2000$</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-personnes-qui-aiment-les-drama">Nombre de personnes qui aiment les Drama</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-femmes-qui-aiment-la-science-fiction">Nombre de femmes qui aiment la science-fiction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nombre-de-personnes-qui-aiment-les-documentaires-et-gagnent-plus-de-1482">Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#liste-des-noms-prenoms-id-et-revenus-des-personnes-qui-gagnent-plus-de-4000">Liste des noms, prénoms, id et revenus des personnes qui gagnent plus de 4000$</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homme-le-plus-riche-nom-et-id">Homme le plus riche (nom et id)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#salaire-moyen">Salaire moyen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#personne-qui-habite-le-plus-pres-de-berenice-cawt-nom-et-id">Personne qui habite le plus près de Bérénice Cawt (nom et id)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#les-noms-et-ids-des-23-personnes-qui-travaillent-chez-google">Les noms et ids des 23 personnes qui travaillent chez google</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#personne-la-plus-agee">Personne la plus âgée</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#personne-la-plus-jeune">Personne la plus jeune</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lien-depot">Lien dépôt</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../verification/">Exercice de vérification</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation Inès Massa</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Exerice Tinder</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="exerice-tinder"><a href="../">Exerice Tinder</a></h1>
+<p>Objectif : Écrire un code qui permet d’afficher la réponse à chacune de ces questions.</p>
+<h2 id="partie-1-analyse">Partie 1 : Analyse</h2>
+<p>il y a un code qui permet d'afficher les réponses, donc les réponses sont déjà presentes dans le document... il faut trouver un moyen de les récupérer et de les afficher.</p>
+<p>Elles doivent être dans people.json. 
+1. Comment les appeler
+2. Comment les mettre sous forme de questions
+3. Comment associer ces réponses à leurs questions respectives</p>
+<h2 id="partie-2-questions">Partie 2 : Questions</h2>
+<ul>
+<li>
+<p>j'ai pris la même forme de boucle à chaque fois (à peu près) et je l'adapte</p>
+</li>
+<li>
+<p>Pour nombre de femmes :</p>
+</li>
+</ul>
+<pre><code class="language-python">print(colored(&quot;Nombre de femmes : &quot;, 'yellow'))
+femmes = [p for p in people if p['gender'] == 'Female']
+pprint(len(femmes))
+</code></pre>
+<p>ou faire le nombre total de personnes - le nombre d'hommes</p>
+<pre><code class="language-python">femmes = 1000-491
+print(f&quot;Nombre de femmes : {femmes}&quot;)
+</code></pre>
+<ol>
+<li>Ce que les personnes cherchent
+Donc on veut savoir le nombre de personnes qui cherche un "M" et le nombre de personne qui cherche un "F"</li>
+</ol>
+<h2 id="nombre-de-personnes-qui-cherchent-homme">Nombre de personnes qui cherchent homme</h2>
+<pre><code class="language-python">charo = []
+for person in people:
+    if person[&quot;looking_for&quot;] == &quot;M&quot;:
+        charo.append(person)
+print(f&quot;Nombre de personne qui cherchent un homme : {len(charo)}&quot;)
+</code></pre>
+<h2 id="nombre-de-personnes-qui-cherchent-femme">Nombre de personnes qui cherchent femme</h2>
+<pre><code class="language-python">charo2 = []
+for person in people:
+    if person[&quot;looking_for&quot;] == &quot;F&quot;:
+        charo2.append(person)
+print(f&quot;Nombre de personne qui cherchent une femme : {len(charo2)}&quot;)
+</code></pre>
+<h2 id="nombre-de-personnes-qui-gagnent-plus-de-2000">Nombre de personnes qui gagnent plus de 2000$</h2>
+<pre><code class="language-python">riche = []
+for person in people:
+    argent = person[&quot;income&quot;]
+    argent_converti = float(argent.replace(&quot;$&quot;,&quot;&quot;)) #converti pcq c'est sous forme de texte a cause de $
+    if argent_converti &gt; 2000:
+        riche.append(person)
+print(f&quot;Nombre de personne qui gagne plus de 2000$ : {len(riche)}&quot;)
+</code></pre>
+<h2 id="nombre-de-personnes-qui-aiment-les-drama">Nombre de personnes qui aiment les Drama</h2>
+<pre><code class="language-python">drama_lover = []
+for person in people:
+    films = person[&quot;pref_movie&quot;]
+    films_converti = films.replace(&quot;|&quot;,&quot;&quot;)
+    if films == &quot;Drama&quot;:
+        drama_lover.append(person)
+print(f&quot;Nombre de personnes qui aiment les Drama : {len(drama_lover)}&quot;)
+</code></pre>
+<h2 id="nombre-de-femmes-qui-aiment-la-science-fiction">Nombre de femmes qui aiment la science-fiction</h2>
+<pre><code class="language-python">femmes_lover = []
+for person in people:
+    if person[&quot;gender&quot;] == &quot;Female&quot;:
+        films = person[&quot;pref_movie&quot;]
+        films_converti = films.replace(&quot;|&quot;,&quot;&quot;)
+        if films == &quot;Sci-Fi&quot;:
+            femmes_lover.append(person)
+print(f&quot;Nombre de femmes qui aiment la science-fiction : {len(femmes_lover)}&quot;)
+</code></pre>
+<h2 id="nombre-de-personnes-qui-aiment-les-documentaires-et-gagnent-plus-de-1482">Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$</h2>
+<pre><code class="language-python">docu_riche = []
+for person in people:
+    films = person[&quot;pref_movie&quot;].replace(&quot;|&quot;,&quot;&quot;)
+    income = float(person[&quot;income&quot;].replace(&quot;$&quot;,&quot;&quot;))
+    if films == &quot;Documentary&quot; and income &gt; 1482:
+        docu_riche.append(person)
+print(f&quot;Nombre de personnes qui aiment les documentaires et gagnent plus de 1482$ : {len(docu_riche)}&quot;)
+</code></pre>
+<h2 id="liste-des-noms-prenoms-id-et-revenus-des-personnes-qui-gagnent-plus-de-4000">Liste des noms, prénoms, id et revenus des personnes qui gagnent plus de 4000$</h2>
+<pre><code class="language-python">all_infos = []
+for person in people:
+    income = float(person[&quot;income&quot;].replace(&quot;$&quot;,&quot;&quot;))
+    if income &gt; 4000:
+        infos = {
+            &quot;nom&quot;: person[&quot;last_name&quot;],
+            &quot;prenom&quot;: person[&quot;first_name&quot;],
+            &quot;id&quot;: person[&quot;id&quot;],
+            &quot;revenu&quot;: income
+        }
+        `all_infos.append(infos)
+#faut print toutes les personnes concernées par 4000
+#if person[&quot;income&quot;]&gt;4000 print person[&quot;income&quot;].[name].[prenom].[id]&gt;4000
+print(&quot;Liste des personnes qui gagnent plus de 4000$ :&quot;)
+
+for person in all_infos:
+    print(
+        &quot;Nom :&quot;, person[&quot;nom&quot;],
+        &quot;, Prénom :&quot;, person[&quot;prenom&quot;],
+        &quot;, ID :&quot;, person[&quot;id&quot;],
+        &quot;, Revenu :&quot;, person[&quot;revenu&quot;], &quot;$&quot;)
+</code></pre>
+<h2 id="homme-le-plus-riche-nom-et-id">Homme le plus riche (nom et id)</h2>
+<pre><code class="language-python">homme_riche = people[0]
+revenu_max = 0
+
+for person in people:
+    if person[&quot;gender&quot;] == &quot;Male&quot;:
+        income = float(person[&quot;income&quot;].replace(&quot;$&quot;,&quot;&quot;))
+
+        if income &gt; revenu_max:
+            revenu_max = income
+            homme_riche = person
+
+print(
+    &quot;L'homme le plus riche est :&quot;,
+    homme_riche[&quot;last_name&quot;],
+    &quot;, ID :&quot;, homme_riche[&quot;id&quot;],
+    &quot;, Revenu :&quot;, revenu_max, &quot;$&quot;)
+</code></pre>
+<h2 id="salaire-moyen">Salaire moyen</h2>
+<pre><code class="language-python">salaires = 0
+for person in people:
+    income = float(person[&quot;income&quot;].replace(&quot;$&quot;,&quot;&quot;))
+    salaires = salaires + income
+    salaire_moyen = salaires / len(people)
+
+print(f&quot;salaire moyen : {salaire_moyen}&quot;)
+#la moyenne c'est tout les salaires additionnés divisé par le nombre de salaires
+</code></pre>
+<h2 id="personne-qui-habite-le-plus-pres-de-berenice-cawt-nom-et-id">Personne qui habite le plus près de Bérénice Cawt (nom et id)</h2>
+<pre><code class="language-python">#besoin de savoir les coordonnées de berenice (&quot;latitude&quot;:15.5900396,&quot;longitude&quot;:-87.879523)
+#person[&quot;latitude&quot;,&quot;longitude&quot;] &lt; berenice[&quot;latitude&quot;, &quot;longitude&quot; &lt; person[&quot;latitude&quot;, &quot;longitude&quot;]
+
+berenice_lat = 15.5900396
+berenice_long = -87.879523
+voisine = people[0]
+min_distance = abs(float(voisine[&quot;latitude&quot;]) - berenice_lat) + abs(float(voisine[&quot;longitude&quot;]) - berenice_long)
+
+for person in people:
+    if person[&quot;first_name&quot;] == &quot;Bérénice&quot; and person[&quot;last_name&quot;] == &quot;Cawt&quot;:
+            continue
+    latitude = float(person[&quot;latitude&quot;])
+    longitude = float(person[&quot;longitude&quot;])
+    distance = abs(latitude - berenice_lat) + abs(longitude - berenice_long)
+
+    if distance &lt; min_distance:
+        min_distance = distance
+        voisine = person
+
+print(
+    &quot;La personne la plus proche de Bérénice est :&quot;,
+    voisine[&quot;first_name&quot;], voisine[&quot;last_name&quot;],
+    &quot;| ID :&quot;, voisine[&quot;id&quot;]
+)
+</code></pre>
+<h2 id="les-noms-et-ids-des-23-personnes-qui-travaillent-chez-google">Les noms et ids des 23 personnes qui travaillent chez google</h2>
+<pre><code class="language-python">google_lover = []
+for person in people:
+    email = person[&quot;email&quot;]
+    if &quot;google&quot; in email:
+        infos = {
+            &quot;nom&quot; : person[&quot;last_name&quot;],
+            &quot;prenom&quot; : person[&quot;first_name&quot;],
+            &quot;id&quot; : person[&quot;id&quot;]
+        }
+        google_lover.append(infos)
+print(&quot;Les noms et ids des 23 personnes qui travaillent chez google: &quot;)
+for person in google_lover:
+    print(f&quot;{person[&quot;prenom&quot;]} {person[&quot;nom&quot;]} (ID: {person[&quot;id&quot;]})&quot;)
+</code></pre>
+<h2 id="personne-la-plus-agee">Personne la plus âgée</h2>
+<pre><code class="language-python">#y'a pas une bibliotheque pour les calendriers??? OUI from datetime import datetime
+#faut lui dire que cest ce format la &quot;annee&quot;/&quot;mois&quot;/&quot;jour&quot;
+#de le calculer 2026 - &quot;date de naissance&quot;
+
+la_vieille = people[0]
+age_max = -1 
+for person in people:
+    birthday = person[&quot;date_of_birth&quot;]
+    date_naissance = datetime.strptime(birthday, &quot;%Y-%m-%d&quot;)
+    age = 2026 - date_naissance.year
+
+    if age &gt; age_max:
+        age_max = age
+        la_vieille = person
+
+print(f&quot;La personne la plus âgée est {la_vieille['first_name']} {la_vieille['last_name']}.\nElle a {age_max} ans en 2026.&quot;)
+</code></pre>
+<h2 id="personne-la-plus-jeune">Personne la plus jeune</h2>
+<pre><code class="language-python">la_jeune = people[0]
+age_mini = 200
+for person in people:
+    birthday = person[&quot;date_of_birth&quot;]
+    date_naissance = datetime.strptime(birthday, &quot;%Y-%m-%d&quot;)
+    age = 2026 - date_naissance.year
+
+    if age &lt; age_mini:
+        age_mini = age
+        la_jeune = person
+
+print(f&quot;La personne la plus jeune est {la_jeune['first_name']} {la_jeune['last_name']}.\nElle a {age_mini} ans en 2026.&quot;)
+</code></pre>
+<p>Bon j'ai pas tout mis car tout est dispo sur le lien, je me suis arrêtée à "Age moyen des femmes qui aiment les drames et habitent sur le fuseau horaire, de Paris"</p>
+<h2 id="lien-depot">Lien dépôt</h2>
+<p><a href="https://github.com/massaines-cpu/Prairie-Ines-Massa/blob/initiale/tinder/reponses.py">Lien vers exercice</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tableau/" class="btn btn-neutral float-left" title="Exercice tableau groupes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../verification/" class="btn btn-neutral float-right" title="Exercice de vérification">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tableau/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../verification/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

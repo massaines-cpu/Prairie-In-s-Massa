@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Jeu robot humain - Documentation Inès Massa</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Jeu robot humain";
+        var mkdocs_page_input_path = "stupidgame.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation Inès Massa
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Documentation Inès Massa</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SQL/">Exercice SQL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../analyse/">Exercice analyse et production</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../arbre/">Exercice Asch Expérience</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../definitions/">Définitions</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Jeu robot humain</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#dp-strategy">DP strategy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definir-les-fonctions">Définir les fonctions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pour-la-valeur-des-cartes">Pour la valeur des cartes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pour-les-donnees-des-joueurs">Pour les données des joueurs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-pour-creer-le-jeu-sans-strategie-au-hasard">Code pour créer le jeu sans stratégie (au hasard)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pourcentage-de-victoire-du-robot">Pourcentage de victoire du robot</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#si-on-veut-integrer-la-strategie-des-joueurs">Si on veut intégrer la stratégie des joueurs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#code-pour-integrer-la-strategie-des-joueurs">Code pour intégrer la stratégie des joueurs</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lien-depot">Lien dépôt</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tableau/">Exercice tableau groupes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tinder/">Exerice Tinder</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../verification/">Exercice de vérification</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation Inès Massa</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Jeu robot humain</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="jeu-robot-humain"><a href="../">Jeu robot humain</a></h1>
+<p><strong>Objectif</strong> : Coder un jeu de cartes entre un humain et un robot, puis intégrer une stratégie de jeu dans le système pour faire en sorte que l'humain ou le robot gagne à chaque fois</p>
+<h2 id="dp-strategy">DP strategy</h2>
+<h3 id="definir-les-fonctions">Définir les fonctions</h3>
+<h4 id="pour-la-valeur-des-cartes">Pour la valeur des cartes</h4>
+<pre><code class="language-python">class Carte: #represente une carte du jeu
+    def __init__(self, value, shape):
+        self.value = value   #chaque carte contient ces 2 informations
+        self.shape = shape
+    def __str__(self):
+        return self.shape + str(self.value) #lisibilité, R3 OU C1
+    def getValue(selfself):
+        return self.value #on a la valeur de la carte
+</code></pre>
+<h4 id="pour-les-donnees-des-joueurs">Pour les données des joueurs</h4>
+<pre><code class="language-python">class Player: #classe du joueur, donc ses infos
+    def __init__(self, name : str, strategy):
+        self.name = name #humain ou robot
+        self.hand = []  #cartes dans la main
+        self.strategy = strategy #strat pour quelle carte jouer
+    def __str__(self):
+        return self.name + &quot;: &quot; + str([str(carte) for carte in self.hand]) #visibilité sur nom joueur + ses cartes
+    def play(self):
+        return self.hand.pop(-1) #aleatoire
+    def play(self): #soit l'un ou l'autre par contre
+        return self.strategy(self.hand) #on integre strat
+
+</code></pre>
+<h3 id="code-pour-creer-le-jeu-sans-strategie-au-hasard">Code pour créer le jeu sans stratégie (au hasard)</h3>
+<pre><code class="language-python">from card import Carte
+from player import Player
+import random
+
+def partie():
+    pioche = [
+        Carte(0, 'R'),
+        Carte(1, 'R'),
+        Carte(2, 'R'),
+        Carte(3, 'R'),
+        Carte(4, 'R'),
+        Carte(1, 'C'),
+        Carte(2, 'C'),
+        Carte(3, 'C'),
+        Carte(4, 'C'),
+        Carte(5, 'C')
+    ]
+    assert len(pioche) == 10
+    random.shuffle(pioche)
+    humain = Player('humain', rand)
+    robot = Player('robot', rand) #mode alearoire
+
+    while len(pioche): #distribution
+        carte = pioche.pop(-1)
+        humain.hand.append(carte)
+        carte = pioche.pop(-1)
+        robot.hand.append(carte)
+    print(robot)
+    print(humain)
+
+    point_robot = 0
+    point_humain = 0
+    for tour in range(5): #5tours
+        carte_humain = humain.play()
+        carte_robot = robot.play()
+
+        if carte_robot.value &gt;= carte_humain.value: #on compare
+            point_robot += 1
+        else:
+            point_humain += 1
+
+    if point_robot &gt;= 3: #joueur qui gg en moins de 3 manches
+        return 'robot'
+    else:
+        return 'humain'
+</code></pre>
+<h4 id="pourcentage-de-victoire-du-robot">Pourcentage de victoire du robot</h4>
+<pre><code class="language-python">victoires_robot = 0
+nb_parties = 10000 #plus c'est eleve + c'est fiable
+
+for i in range(nb_parties):
+    gagnant = partie()
+    if gagnant == 'robot':
+        victoires_robot += 1
+taux = (victoires_robot / nb_parties) * 100
+print(f&quot;Sur {nb_parties} parties, le robot a gagné {victoires_robot} fois.&quot;)
+print(f&quot;Taux de victoire du robot : {taux}%&quot;)
+</code></pre>
+<h4 id="si-on-veut-integrer-la-strategie-des-joueurs">Si on veut intégrer la stratégie des joueurs</h4>
+<pre><code class="language-python">import random
+from card import Card
+
+def rand(hand):
+    random.shuffle(hand)
+    return hand.pop() #bon la c'est la strat pas strat, uniquement aleatoire
+
+def plusGrande(hand, carte):
+    hand.sort(key=lambda carte: carte.value)
+    return hand.pop(-1)
+
+def plusPetite(hand, carte):
+    hand.sort(key=lambda carte: carte.value)
+    return hand.pop()
+
+def smart(hand, carte):
+    if carte:
+        hand.sort(key=lambda c: c.value)
+        for c in hand:
+            if c.value &gt; carte.value: #sadapte en fonction adversaire, si cette carte alors joue celle la
+                hand.remove(c)
+                return c
+    return plusPetite(hand, carte)
+</code></pre>
+<h4 id="code-pour-integrer-la-strategie-des-joueurs">Code pour intégrer la stratégie des joueurs</h4>
+<pre><code class="language-python">import random
+from card import Carte
+from player import Player
+from strategy import rand
+
+
+def partie(strategy_humain, strategy_robot): #choix de strat pour chaque joueur
+    # les cartes
+    pioche = [
+        Card(0, &quot;R&quot;),
+        Card(1, &quot;R&quot;),
+        Card(2, &quot;R&quot;),
+        Card(3, &quot;R&quot;),
+        Card(4, &quot;R&quot;),
+        Card(1, &quot;C&quot;),
+        Card(2, &quot;C&quot;),
+        Card(3, &quot;C&quot;),
+        Card(4, &quot;C&quot;),
+        Card(5, &quot;C&quot;),
+    ]
+    # les joueurs
+    humain = Player(&quot;Humain&quot;, strategy_humain)
+    robot = Player(&quot;Robot&quot;, strategy_robot)
+    # mélange
+    random.shuffle(pioche)
+    # distribution
+    while len(pioche) &gt; 0:
+        carte = pioche.pop(-1)
+        humain.hand.append(carte)
+        carte = pioche.pop(-1)
+        robot.hand.append(carte)
+
+    # tours
+    points_du_robot = 0
+    for tour in range(5):
+        carte_du_robot = robot.play() #lerobot joue en premier
+        carte_de_humain = humain.play(carte_du_robot) #lhumain joue en fonction du coup
+        if carte_du_robot.value &gt;= carte_de_humain.value:
+            points_du_robot += 1
+    # victoire
+    if points_du_robot &gt;= 3:
+        return robot
+    else:
+        return humain
+</code></pre>
+<h2 id="lien-depot">Lien dépôt</h2>
+<p><a href="https://github.com/massaines-cpu/Prairie-Ines-Massa/tree/initiale/stupidcard">Lien vers exercice</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../definitions/" class="btn btn-neutral float-left" title="Définitions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tableau/" class="btn btn-neutral float-right" title="Exercice tableau groupes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../definitions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tableau/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
