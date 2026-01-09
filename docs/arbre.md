@@ -1,4 +1,4 @@
-# [Exercice Asch Expérience crash out en 4DX](index.md)
+# [Exercice Asch Expérience](index.md)
 
 Objectif : Créer un arbre de décision pour l’expérience de Asch et un burn-out
 
@@ -17,7 +17,6 @@ Objectif : Créer un arbre de décision pour l’expérience de Asch et un burn-
 3. solveDf(df) = remplit la colonne v avec toutes les réponses correctes
 4. On entraîne un arbre de décision sur ces données 
 5. On teste l’arbre et on calcule le pourcentage de bonnes réponses
-6. On sauvegarde le modèle pour l’utiliser plus tard
 ## Création du tableau
 ```python
 import random
